@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OsoroTech Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>OsoroTech</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>OsoroTech is a technology company providing software development, cybersecurity, and cloud solutions. We deliver scalable, secure, and cost-effective systems for businesses of all sizes.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-card">
+        <h3>Software Development</h3>
+        <p>Custom web and mobile applications designed to meet your needs.</p>
+      </div>
+      <div class="service-card">
+        <h3>Cybersecurity</h3>
+        <p>Risk assessment, penetration testing, and 24/7 monitoring services.</p>
+      </div>
+      <div class="service-card">
+        <h3>Cloud Solutions</h3>
+        <p>Seamless migration, cloud optimization, and managed infrastructure.</p>
+      </div>
+
+      <!-- Service list for dynamic addition -->
+      <ul id="service-list"></ul>
+    </section>
+
+    <section id="team">
+      <h2>Meet the Team</h2>
+      <div class="team-member" id="team-info">
+        <img src="images/osoro.jpg" alt="Team member">
+        <h4>Edigar Osoro</h4>
+        <p>Founder & Software Engineer</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: osoroedgar@gmail.com</p>
+      <p>Phone: +254 729475060</p>
+    </section>
+    <p>&copy; 2025 OsoroTech. All rights reserved.</p>
+  </footer>
+
+  <!-- Script file -->
+  <script src="script.js"></script>
+
+  <!-- Interactive buttons to test JavaScript functions -->
+  <section style="padding:20px; background:#fff; margin:20px; border-radius:8px;">
+    <h2>Try Our Interactive Features</h2>
+    <button onclick="greetVisitor('Guest')">Meet the founder</button>
+    <button onclick="alert('Estimated cost: $' + calculateCost(50,40))">Calculate Cost</button>
+    <button onclick="highlightServices()">Highlight Services</button>
+    <button onclick="toggleElement('team-info')">Toggle Team Info</button>
+    <button onclick="addServiceItem()">Add Service Item</button>
+  </section>
+
+</body>
+</html>

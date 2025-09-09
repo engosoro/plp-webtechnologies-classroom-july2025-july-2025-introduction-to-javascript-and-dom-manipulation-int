@@ -1,0 +1,161 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #228B22; /* Green background */
+  color: #333;
+  text-align: center;
+}
+
+/* Links */
+a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   HEADER & NAVIGATION
+============================== */
+header {
+  background: #004d00;
+  color: #fff;
+  padding: 20px;
+}
+header h1 {
+  margin-bottom: 10px;
+  cursor: pointer; /* make it obvious it's clickable */
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==============================
+   MAIN SECTIONS
+============================== */
+main section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* ==============================
+   SERVICES SECTION WITH GRID
+============================== */
+#services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#services h2 {
+  grid-column: 1 / -1; /* Title spans full width */
+  margin-bottom: 10px;
+}
+.service-card {
+  background: #e6ffe6;
+  border: 1px solid #004d00;
+  padding: 15px;
+  border-radius: 6px;
+  transition: background 0.3s, border 0.3s;
+}
+.service-card h3 {
+  color: #004d00;
+  margin-bottom: 10px;
+}
+
+/* Style for dynamically added services */
+#service-list {
+  grid-column: 1 / -1;
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+#service-list li {
+  background: #ccffcc;
+  border: 1px dashed #004d00;
+  margin: 5px auto;
+  padding: 8px;
+  border-radius: 4px;
+  width: 60%;
+}
+
+/* ==============================
+   TEAM SECTION WITH FLEXBOX
+============================== */
+#team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-member {
+  background: #e6ffe6;
+  border: 1px solid #004d00;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 20px;
+  max-width: 250px;
+  transition: opacity 0.5s ease; /* smoother toggle */
+}
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background: #004d00;
+  color: #fff;
+  padding: 20px;
+}
+footer section {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+/* Tablet view - services grid becomes 2 columns */
+@media (max-width: 900px) {
+  #services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #service-list li {
+    width: 80%;
+  }
+}
+
+/* Mobile view - services grid becomes single column */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #services {
+    grid-template-columns: 1fr;
+  }
+  #service-list li {
+    width: 100%;
+  }
+}
